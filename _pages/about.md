@@ -12,4 +12,4 @@ This is the offical site of Chenqing Zhu. She is currently pursuing her PhD degr
 -------------------------
 
 
-This site uses the template at https://github.com/academicpages/academicpages.github.io.
+This site uses the template at [academicpages](https://github.com/academicpages/academicpages.github.io).
