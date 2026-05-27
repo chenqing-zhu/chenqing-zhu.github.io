@@ -1,15 +1,76 @@
 ---
 permalink: /
-title: "Welcome to Chenqing's site!"
+title: "ZHU Chenqing"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the offical site of Chenqing Zhu. She is currently pursuing her PhD degree at [S3DI Lab](https://s3di-lab.github.io/) supervised by [Professor LI Songze](https://s3di-lab.github.io/projects/about_lsz_f/) at [Southeast Univeristy](https://www.seu.edu.cn/). Before she came to Southeast University, she got her MPhil degree of Internet of Things from [HKUST(GZ)](https://www.hkust-gz.edu.cn) under supervison of [Professor Danny Hin Kwok TSANG](http://c2e.ece.ust.hk/main/) and [Professor LI Songze](https://s3di-lab.github.io/projects/about_lsz_f/) in 2024. She got her Bachellor's degree in Software Engineering from [Soochow Univeristy](http://eng.suda.edu.cn/) in 2022. 
+<div class="home-about">
+  <section class="home-hero" aria-labelledby="home-intro-title">
+    <p class="home-eyebrow">PhD Student - Southeast University</p>
+    <h2 id="home-intro-title">Researcher in federated learning, trustworthy AI, and multimodal large models.</h2>
+    <p class="home-lede">
+      I am a second-year PhD student at
+      <a href="https://s3di-lab.github.io/">S<sup>3</sup>IC Lab</a>,
+      Southeast University, advised by
+      <a href="https://s3di-lab.github.io/projects/about_lsz_f/">Professor LI Songze</a>.
+      My current work focuses on secure and efficient learning across distributed, large-scale, and multimodal AI systems.
+    </p>
+    <div class="home-actions" aria-label="Primary links">
+      <a class="home-action home-action--primary" href="mailto:chenqing_zhu@seu.edu.cn">Email</a>
+      <a class="home-action" href="/publications/">Publications</a>
+      <a class="home-action" href="/cv/">CV</a>
+    </div>
+  </section>
 
--------------------------
+  <section class="home-section" aria-labelledby="home-focus-title">
+    <div class="home-section__header">
+      <p>01</p>
+      <h3 id="home-focus-title">Research Focus</h3>
+    </div>
+    <div class="home-grid">
+      <article class="home-tile home-tile--teal">
+        <h4>Federated Learning</h4>
+        <p>Algorithms for collaborative model training under distributed data, privacy, and system constraints.</p>
+      </article>
+      <article class="home-tile home-tile--blue">
+        <h4>LLMs and Federated Learning Security</h4>
+        <p>Security issues that emerge when large language models interact with federated learning workflows.</p>
+      </article>
+      <article class="home-tile home-tile--amber">
+        <h4>Multimodal LLM Backdoor Attacks and Defenses</h4>
+        <p>Backdoor threats, evaluation, and defense strategies for multimodal large model systems.</p>
+      </article>
+    </div>
+  </section>
 
+  <section class="home-section" aria-labelledby="home-education-title">
+    <div class="home-section__header">
+      <p>02</p>
+      <h3 id="home-education-title">Education</h3>
+    </div>
+    <ol class="home-timeline">
+      <li>
+        <span>2024 - Present</span>
+        <strong>PhD Student, Southeast University</strong>
+        <p>S<sup>3</sup>IC Lab, advised by Professor LI Songze.</p>
+      </li>
+      <li>
+        <span>2022 - 2024</span>
+        <strong>MPhil in Internet of Things, HKUST(GZ)</strong>
+        <p>Advised by Professor Danny Hin Kwok TSANG and Professor LI Songze.</p>
+      </li>
+      <li>
+        <span>2018 - 2022</span>
+        <strong>Bachelor's Degree in Software Engineering, Soochow University</strong>
+        <p>Undergraduate training in software systems and engineering practice.</p>
+      </li>
+    </ol>
+  </section>
 
-This site uses the template at [academicpages](https://github.com/academicpages/academicpages.github.io).
+  <section class="home-section home-note" aria-label="Website note">
+    <p>This site is built from the <a href="https://github.com/academicpages/academicpages.github.io">academicpages</a> template.</p>
+  </section>
+</div>
