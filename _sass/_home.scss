@@ -305,6 +305,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .pets-grid--memory {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .pet-card {
     margin: 0;
     overflow: hidden;
@@ -348,6 +352,16 @@
     background: #fffaf3;
   }
 
+  .pet-card--memory {
+    border-color: #bec8d2;
+    background: #f8fafb;
+  }
+
+  .pet-card--memory figcaption small {
+    background: #e7edf2;
+    color: #53606b;
+  }
+
   @include breakpoint(max-width $medium) {
     .pets-hero h2 {
       font-size: 1.4rem;
@@ -358,6 +372,10 @@
     }
 
     .pets-grid--adopted {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pets-grid--memory {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
