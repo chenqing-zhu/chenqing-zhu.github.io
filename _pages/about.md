@@ -25,9 +25,28 @@ redirect_from:
     </div>
   </section>
 
-  <section class="home-section" aria-labelledby="home-focus-title">
+  <section class="home-section" aria-labelledby="home-news-title">
     <div class="home-section__header">
       <p>01</p>
+      <h3 id="home-news-title">News</h3>
+    </div>
+    <ol class="home-timeline home-news">
+      <li>
+        <span>May 14, 2026</span>
+        <strong>One paper was accepted to USENIX Security 2026.</strong>
+        <p><a href="/publication/2026-01-01-when-the-aggregator-cheats">When the Aggregator Cheats: Data-Free Backdoors in Federated LLM-based QA Systems</a></p>
+      </li>
+      <li>
+        <span>May 25, 2025</span>
+        <strong>One paper was accepted to WASA 2026.</strong>
+        <p><a href="/publication/2026-01-01-client-driven-federated-learning-dynamic-mixtures">Client-Driven Federated Learning for Dynamic Mixtures of Distributions</a></p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="home-section" aria-labelledby="home-focus-title">
+    <div class="home-section__header">
+      <p>02</p>
       <h3 id="home-focus-title">Research Focus</h3>
     </div>
     <div class="home-grid">
@@ -48,7 +67,7 @@ redirect_from:
 
   <section class="home-section" aria-labelledby="home-education-title">
     <div class="home-section__header">
-      <p>02</p>
+      <p>03</p>
       <h3 id="home-education-title">Education</h3>
     </div>
     <ol class="home-timeline">

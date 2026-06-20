@@ -36,8 +36,10 @@ layout: default
         
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.collection == 'publications' and page.publication %}
+          <p class="pub-meta">{{ page.publication }}</p>
         {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p class="pub-meta">Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}    
@@ -47,16 +49,28 @@ layout: default
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.citation and page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Download Paper</a></p>
-        {% elsif page.citation and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% if page.paperurl or page.arxivurl or page.slidesurl %}
+          <p class="pub-links" style="font-size: smaller">
+            {% assign has_publication_link = false %}
+            {% if page.paperurl %}
+              <a href="{{ page.paperurl }}">{{ page.paperlabel | default: "Paper" }}</a>
+              {% assign has_publication_link = true %}
+            {% endif %}
+            {% if page.arxivurl %}
+              {% if has_publication_link %} | {% endif %}<a href="{{ page.arxivurl }}">arXiv</a>
+              {% assign has_publication_link = true %}
+            {% endif %}
+            {% if page.slidesurl %}
+              {% if has_publication_link %} | {% endif %}<a href="{{ page.slidesurl }}">Slides</a>
+            {% endif %}
+          </p>
+        {% endif %}
+
+        {% if page.citation %}
+          <div class="pub-citation" style="font-size: smaller">
+            <strong>BibTeX</strong>
+            <pre><code>{{ page.citation | escape }}</code></pre>
+          </div>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}

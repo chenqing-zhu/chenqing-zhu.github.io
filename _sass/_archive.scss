@@ -27,6 +27,26 @@
   }
 }
 
+.archive--publications {
+  @include breakpoint($medium) {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include breakpoint($large) {
+    width: 83.0508474576%;
+    float: right;
+    margin-right: 0;
+    padding-left: 2.5%;
+  }
+
+  @include breakpoint($x-large) {
+    max-width: none;
+  }
+}
+
 .archive__subtitle {
   margin: 1.414em 0 0;
   padding-bottom: 0.5em;
@@ -104,6 +124,106 @@
 
   .page__meta {
     margin: 0 0 4px;
+  }
+}
+
+.publication-list {
+  max-width: 100%;
+  font-family: $sans-serif;
+
+  h2 {
+    margin: 1.15rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: $darker-gray;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .publication-entry {
+    max-width: 100%;
+    margin: 0 0 1rem;
+    padding: 0 0 0.85rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .publication-entry:last-child {
+    border-bottom: 0;
+  }
+
+  h3 {
+    max-width: 100%;
+    margin: 0 0 0.2rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.32;
+
+    a {
+      color: $darker-gray;
+      text-decoration: none;
+
+      &:hover {
+        color: $info-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  p {
+    max-width: 100%;
+    margin: 0.18rem 0;
+    font-size: 0.68rem;
+    line-height: 1.45;
+  }
+
+  .publication-venue {
+    color: $dark-gray;
+  }
+
+  .publication-summary {
+    color: $gray;
+  }
+
+  .publication-links {
+    font-weight: 600;
+
+    span {
+      margin: 0 0.25rem;
+      color: $light-gray;
+      font-weight: 400;
+    }
+  }
+
+  .publication-bib {
+    max-width: 100%;
+    margin-top: 0.35rem;
+    font-size: 0.65rem;
+    color: $dark-gray;
+
+    summary {
+      display: inline-block;
+      cursor: pointer;
+      font-weight: 600;
+      color: $info-color;
+    }
+
+    pre {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 0.35rem 0 0;
+      padding: 0.45rem 0.55rem;
+      overflow: visible;
+      font-size: 0.62rem;
+      line-height: 1.35;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      word-break: normal;
+      background: $lighter-gray;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+    }
   }
 }
 

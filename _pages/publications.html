@@ -3,6 +3,7 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+archive_class: archive--publications
 ---
 
 {% if site.author.googlescholar %}
@@ -11,7 +12,8 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<div class="publication-list">
+
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -20,17 +22,61 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2>{{ category[1].title }}</h2>
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      <article class="publication-entry">
+        <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+
+        {% if post.publication %}
+          <p class="publication-venue">{{ post.publication }}</p>
+        {% elsif post.venue %}
+          <p class="publication-venue"><i>{{ post.venue }}</i></p>
+        {% endif %}
+
+        {% if post.excerpt %}
+          <p class="publication-summary">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        {% endif %}
+
+        {% if post.paperurl or post.arxivurl or post.slidesurl %}
+          <p class="publication-links">
+            {% assign has_publication_link = false %}
+            {% if post.paperurl %}
+              <a href="{{ post.paperurl }}">{{ post.paperlabel | default: "Paper" }}</a>
+              {% assign has_publication_link = true %}
+            {% endif %}
+            {% if post.arxivurl %}
+              {% if has_publication_link %}<span>/</span>{% endif %}
+              <a href="{{ post.arxivurl }}">arXiv</a>
+              {% assign has_publication_link = true %}
+            {% endif %}
+            {% if post.slidesurl %}
+              {% if has_publication_link %}<span>/</span>{% endif %}
+              <a href="{{ post.slidesurl }}">Slides</a>
+            {% endif %}
+          </p>
+        {% endif %}
+
+        {% if post.citation %}
+          <details class="publication-bib">
+            <summary>BibTeX</summary>
+            <pre><code>{{ post.citation | escape }}</code></pre>
+          </details>
+        {% endif %}
+      </article>
     {% endfor %}
   {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+    <article class="publication-entry">
+      <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+      {% if post.publication %}
+        <p class="publication-venue">{{ post.publication }}</p>
+      {% elsif post.venue %}
+        <p class="publication-venue"><i>{{ post.venue }}</i></p>
+      {% endif %}
+    </article>
   {% endfor %}
 {% endif %}
 
-
-
+</div>
