@@ -75,6 +75,18 @@ author_profile: true
         <img src="/images/pets/zhima-tang.jpg" alt="芝麻糖">
         <figcaption>芝麻糖</figcaption>
       </figure>
+      <figure class="pet-card">
+        <img src="/images/pets/xiao-qiao.jpg" alt="小乔">
+        <figcaption>小乔</figcaption>
+      </figure>
+      <figure class="pet-card">
+        <img src="/images/pets/zhima-hu.jpg" alt="芝麻糊">
+        <figcaption>芝麻糊</figcaption>
+      </figure>
+      <figure class="pet-card">
+        <img src="/images/pets/zhima-jiang.jpg" alt="芝麻酱">
+        <figcaption>芝麻酱</figcaption>
+      </figure>
     </div>
   </section>
 

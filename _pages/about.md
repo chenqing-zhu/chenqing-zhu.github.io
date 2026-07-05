@@ -19,7 +19,7 @@ redirect_from:
       My current work focuses on secure and efficient learning across distributed, large-scale, and multimodal AI systems.
     </p>
     <div class="home-actions" aria-label="Primary links">
-      <a class="home-action home-action--primary" href="mailto:chenqing_zhu@seu.edu.cn">Email</a>
+      <a class="home-action home-action--primary" href="/cv/">Contact</a>
       <a class="home-action" href="/publications/">Publications</a>
       <a class="home-action" href="/cv/">CV</a>
     </div>
